@@ -1,0 +1,35 @@
+.cart {
+  width: 80%;
+  height: 90%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartAmount {
+  align-self: center;
+}
+.cartBtn {
+  display: flex;
+  align-self: flex-end;
+}
+.noItems {
+  align-self: center;
+  position: relative;
+  top: 50%;
+}
+.cart-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20rem;
+  overflow: auto;
+}
+@media (max-width: 600px) {
+  .cart-item {
+    height: 25rem;
+    border-bottom: 1px solid #fff;
+  }
+}
