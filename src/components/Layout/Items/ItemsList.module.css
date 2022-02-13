@@ -4,3 +4,8 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.infoMsg {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+}

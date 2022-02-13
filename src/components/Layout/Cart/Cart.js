@@ -17,6 +17,10 @@ const Cart = ({ onCloseCart }) => {
     cartCtx.removeItem(id)
   }
 
+  const clearCart = () => {
+    cartCtx.clearCart()
+  }
+
   const cartItems = (
     <ul className={style['cart-item']}>
       {cartCtx.items.map((item) => {
@@ -51,7 +55,7 @@ const Cart = ({ onCloseCart }) => {
       )}
       <div className={style.cartBtn}>
         <Button onClick={onCloseCart}>Close</Button>
-        {hasEmptyCart && <Button>Order</Button>}
+        {hasEmptyCart && <Button onClick={clearCart}>Order</Button>}
       </div>
     </Model>
   )

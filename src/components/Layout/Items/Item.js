@@ -6,7 +6,7 @@ import CartContext from '../../../store/cart-context'
 const Item = ({ title, price, desc, imglink }) => {
   const cartCtx = useContext(CartContext)
 
-  const addItemToCartHandler = () => {
+  const addItemToCartHandler = (e) => {
     cartCtx.addItem({
       id: imglink,
       title: title,
@@ -25,7 +25,11 @@ const Item = ({ title, price, desc, imglink }) => {
         <span className={style['item-price']}>${price}</span>
         <h3>{title}</h3>
         <p>{desc}</p>
-        <Button type='submit' onClick={addItemToCartHandler}>
+        <Button
+          type='submit'
+          onClick={addItemToCartHandler}
+          className={style.cartBtn}
+        >
           Add to cart
         </Button>
       </div>
